@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_ITEMS } from "@/lib/site";
 
-/** Instagram hikâyesi tarzı, yatay kaydırılabilir fotoğraflı sayfa navigasyonu. */
+/** Instagram hikâyesi tarzı, sabit (kaymayan) 4'lü fotoğraflı sayfa navigasyonu. */
 export default function StoriesNav() {
   const pathname = usePathname();
 
@@ -22,7 +22,7 @@ export default function StoriesNav() {
               aria-current={active ? "page" : undefined}
             >
               <span className="story-ring">
-                <Image src={item.img} alt={item.alt} width={106} height={106} />
+                <Image src={item.img} alt={item.alt} width={184} height={184} sizes="92px" priority />
               </span>
               <span className="story-label">{item.label}</span>
             </Link>
