@@ -8,11 +8,14 @@ import FloatingButtons from "@/components/FloatingButtons";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
+/* Fontlar: Archivo (başlıklar) + Plus Jakarta Sans (metin). Geist kullanılmaz. */
+
 const display = Archivo({
   subsets: ["latin", "latin-ext"],
   weight: ["700", "800"],
   variable: "--font-display",
   display: "swap",
+  fallback: ["system-ui", "Arial", "sans-serif"],
 });
 
 const body = Plus_Jakarta_Sans({
@@ -20,6 +23,7 @@ const body = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700"],
   variable: "--font-body",
   display: "swap",
+  fallback: ["system-ui", "Arial", "sans-serif"],
 });
 
 export const metadata: Metadata = {

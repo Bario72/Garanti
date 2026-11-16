@@ -1,0 +1,7 @@
+# Netlify, Next.js projelerini otomatik algılar; bu dosya ayarları sabitler.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
